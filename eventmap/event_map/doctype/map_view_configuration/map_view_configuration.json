@@ -1,0 +1,127 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:map_name",
+ "creation": "2024-07-23 12:20:45.166846",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "map_name",
+  "parent_doctype",
+  "search_type",
+  "parent_reference_type_field",
+  "child_table_name",
+  "parent_reference_field",
+  "column_break_jalt",
+  "child_doctype",
+  "child_longitude_field",
+  "child_latitude_field",
+  "section_break_nezh",
+  "color_coding_field",
+  "color_codings",
+  "display_fields"
+ ],
+ "fields": [
+  {
+   "fieldname": "map_name",
+   "fieldtype": "Data",
+   "label": "Map Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "parent_doctype",
+   "fieldtype": "Link",
+   "label": "Parent Doctype",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "search_type",
+   "fieldtype": "Select",
+   "label": "Search Type",
+   "options": "Dynamic Link\nLink Field\nChild Table\nChild Table Dynamic Link"
+  },
+  {
+   "depends_on": "eval:doc.search_type == \"Dynamic Link\" || doc.search_type == \"Child Table Dynamic Link\"",
+   "fieldname": "parent_reference_type_field",
+   "fieldtype": "Data",
+   "label": "Parent Reference Type Field"
+  },
+  {
+   "depends_on": "eval:doc.search_type == \"Child Table\" || doc.search_type == \"Child Table Dynamic Link\"",
+   "fieldname": "child_table_name",
+   "fieldtype": "Data",
+   "label": "Child Table Name"
+  },
+  {
+   "fieldname": "parent_reference_field",
+   "fieldtype": "Data",
+   "label": "Parent Reference FIeld"
+  },
+  {
+   "fieldname": "column_break_jalt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "child_doctype",
+   "fieldtype": "Link",
+   "label": "Child Doctype",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "child_longitude_field",
+   "fieldtype": "Data",
+   "label": "Child Longitude Field"
+  },
+  {
+   "fieldname": "child_latitude_field",
+   "fieldtype": "Data",
+   "label": "Child Latitude Field"
+  },
+  {
+   "fieldname": "section_break_nezh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "color_coding_field",
+   "fieldtype": "Data",
+   "label": "Color Coding Field"
+  },
+  {
+   "fieldname": "color_codings",
+   "fieldtype": "Table",
+   "label": "Color Codings",
+   "options": "Map View Color Coding"
+  },
+  {
+   "fieldname": "display_fields",
+   "fieldtype": "Table",
+   "label": "Display Fields",
+   "options": "Map View Display Fields"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-23 14:01:44.192277",
+ "modified_by": "Administrator",
+ "module": "Event Map",
+ "name": "Map View Configuration",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,8 @@
+// Copyright (c) 2024, Deepak Malik and contributors
+// For license information, please see license.txt
+
+// frappe.ui.form.on("Map View Configuration", {
+// 	refresh(frm) {
+
+// 	},
+// });
